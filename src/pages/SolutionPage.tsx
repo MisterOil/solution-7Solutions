@@ -42,6 +42,7 @@ const SolutionPage: FC<SolutionPageProps> = () => {
   return (
     <>
         <button 
+            style={style.debugButton}
             disabled={vegetables.length > 0 || fruits.length > 0} 
             onClick={() => setisDebugOn(!isDebugOn)} >
                 { `Debug Mode:`} 
@@ -102,6 +103,12 @@ const style: Record<string, CSSProperties> = {
     column: {
         flex: 1,
     },
+    debugButton: {
+        backgroundColor: 'white',
+        padding: '1%',
+        border: '1px solid #ccc',
+        borderRadius: '10px'
+    }
 }
 
 export default SolutionPage;
